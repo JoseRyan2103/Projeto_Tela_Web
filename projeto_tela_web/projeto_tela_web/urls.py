@@ -1,8 +1,7 @@
-"""
-URL configuration for projeto_tela_web project.
+"""registration URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,7 +19,8 @@ from tela import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.signup, name='signup'),
-    path('login/', views.login, name='login'),
-    path('home/', views.home, name='home')
+    path('',views.SignupPage,name='signup'),
+    path('login/',views.LoginPage,name='login'),
+    path('home/',views.HomePage,name='home'),
+    path('logout/',views.LogoutPage,name='logout'),
 ]
